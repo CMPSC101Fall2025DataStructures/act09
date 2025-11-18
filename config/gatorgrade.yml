@@ -1,0 +1,69 @@
+# --> check the technical writing for various characteristics
+- writing/reflection.md:
+  - description: Ensure that reflection.md file exists in the writing/ directory
+    check: ConfirmFileExists
+  - description: Add your name to writing/reflection.md, then delete the 'Add your name here' placeholder 
+    check: MatchFileFragment
+    options:
+      fragment: "Add Your Name Here"
+      count: 0
+      exact: true
+  - description: Ensure no TODO items remain in the reflection
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+  # - description: Ensure reflection contains substantial analysis in clear and meaningful language(minimum 100 words)
+  #   check: CountFileWords
+  #   options:
+  #     count: 100
+  #     exact: false
+
+# --> check that necessary files exist
+- ./src/tutorial_01_simple_game/simple_game.py:
+  - description: Ensure that ./src/tutorial_01_simple_game/simple_game.py file exists
+    check: ConfirmFileExists
+
+
+
+# --> check that necessary files exist
+- ./src/tutorial_02_space_invaders/main.py:
+  - description: Ensure that ./src/tutorial_02_space_invaders/main.py file exists
+    check: ConfirmFileExists
+  - description: Ensure no TODO items remain in the File ./src/tutorial_02_space_invaders/main.py
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+
+# --> check that necessary files exist
+- ./src/tutorial_02_space_invaders/game.py:
+  - description: Ensure that ./src/tutorial_02_space_invaders/game.py file exists
+    check: ConfirmFileExists
+  - description: Ensure no TODO items remain in the File ./src/tutorial_02_space_invaders/game.py 
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+
+# --> check that necessary files exist
+- ./src/tutorial_02_space_invaders/config.py:
+  - description: Ensure that ./src/tutorial_02_space_invaders/config.py file exists
+    check: ConfirmFileExists
+  - description: Ensure no TODO items remain in File ./src/tutorial_02_space_invaders/config.py
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+
+
+
+# count number of commits in the GitHub repository
+- description: Have at least a specific minimum number of commits (3) in repository
+  check: CountCommits
+  options:
+    count: 3
