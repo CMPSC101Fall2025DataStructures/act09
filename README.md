@@ -3,6 +3,7 @@
 CMPSC101 :: Fall 2025
 
 **Assigned**: 19th November 2025
+
 **Due and Expiration date**: TBD (Cut off due date and time).
 
 ![Pygame Logo](graphics/spaceInvaders_500x686.png)
